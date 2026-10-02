@@ -1,56 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CTI Dashboard Concept</title>
-  <style>
+<meta charset="UTF-8">
+<title>CTI Dashboard Concept</title>
+<style>
     body {
-      background: #111;
-      color: #eee;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 40px;
-      text-align: center;
+        background: #0f0f0f;
+        color: #e6e6e6;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
     }
-    h1 {
-      margin-top: 20px;
-      font-size: 36px;
-      letter-spacing: 1px;
+
+    .header {
+        padding: 40px 20px;
+        background: #1a1a1a;
+        border-bottom: 1px solid #333;
     }
-    p {
-      max-width: 800px;
-      margin: 10px auto;
-      line-height: 1.6;
-      font-size: 16px;
+
+    .header h1 {
+        font-size: 42px;
+        margin: 0;
+        letter-spacing: 1px;
     }
-    img {
-      margin-top: 30px;
-      max-width: 90%;
-      border: 2px solid #444;
-      border-radius: 8px;
+
+    .subheader {
+        font-size: 18px;
+        margin-top: 10px;
+        color: #bfbfbf;
     }
+
+    .content {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 20px;
+        line-height: 1.6;
+        font-size: 17px;
+    }
+
+    .dashboard-image {
+        margin-top: 40px;
+    }
+
+    .dashboard-image img {
+        max-width: 95%;
+        border: 2px solid #444;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+
+    .button {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 12px 28px;
+        background: #3a82f7;
+        color: #fff;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 18px;
+        transition: background 0.2s ease;
+    }
+
+    .button:hover {
+        background: #1f5fcc;
+    }
+
     .footer {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #888;
+        margin-top: 50px;
+        padding: 20px;
+        font-size: 14px;
+        color: #888;
     }
-  </style>
+
+    .footer a {
+        color: #4ea3ff;
+        text-decoration: none;
+    }
+</style>
 </head>
 <body>
 
-  <h1>CTI Dashboard Concept</h1>
-  <p>
-    This page provides a live preview of the Cyber Threat Intelligence Dashboard Concept.
-    The visualization demonstrates how enriched vulnerability data can be transformed into
-    actionable insights using modern dashboard design principles.
-  </p>
+    <div class="header">
+        <h1>CTI Dashboard Concept</h1>
+        <div class="subheader">Cyber Threat Intelligence Visualization & Enriched Vulnerability Analytics</div>
+    </div>
 
-  <img src="Concept Dashboard.png" alt="CTI Dashboard Concept">
+    <div class="content">
+        <p>
+            This page provides a live preview of the Cyber Threat Intelligence Dashboard Concept.
+            The visualization demonstrates how enriched vulnerability data can be transformed into
+            actionable insights using modern dashboard design principles.
+        </p>
 
-  <div class="footer">
-    <p>View the full project on GitHub:</p>
-    <p><a href="https://github.com/Incognito-User/CTI-Dashboard-Concept" style="color:#4ea3ff;">GitHub Repository</a></p>
-  </div>
+        <a class="button" href="https://github.com/Incognito-User/CTI-Dashboard-Concept">
+            View GitHub Repository
+        </a>
+
+        <div class="dashboard-image">
+            <img src="assets/dashboard-concept.png" alt="CTI Dashboard Concept">
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 CTI Dashboard Concept · Built for cybersecurity visualization</p>
+    </div>
 
 </body>
 </html>
