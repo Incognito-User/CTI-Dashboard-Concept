@@ -11,7 +11,10 @@ def load_data():
 def dashboard():
     df = load_data()
 
-    # Example: EPSS vs Exploitability scatter plot
+    # Convert dataframe to list of dicts for the HTML table
+    records = df.to_dict(orient="records")
+
+    # Example Plotly chart
     fig = px.scatter(
         df,
         x="EPSS_Score",
@@ -21,7 +24,6 @@ def dashboard():
         title="EPSS vs Exploitability Score"
     )
 
-    # Convert Plotly figure → HTML snippet
     graph_html = fig.to_html(full_html=False)
 
-    return render_template("dashboard.html", graph_html=graph_html)
+    return render_template("dashboard.html", graph_html=graph_html, records=records)
