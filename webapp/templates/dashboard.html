@@ -1,0 +1,26 @@
+<table>
+    <thead>
+        <tr>
+            <th>CVE</th>
+            <th>Severity</th>
+            <th>EPSS</th>
+            <th>KEV</th>
+            <th>Exploit</th>
+            <th>Priority</th>
+            <th>Exposure</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for r in records %}
+        <tr>
+            <td>{{ r["CVE_ID"] }}</td>
+            <td>{{ r["CVSS_Severity"] }}</td>
+            <td>{{ r["EPSS_Score"] }}</td>
+            <td>{{ r["CISA_KEV_Status"] }}</td>
+            <td>{{ r["PublicExploit"] }}</td>
+            <td>{{ r["Patch_Urgency_Tier"] }}</td>
+            <td>{{ r["Exposure"] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
