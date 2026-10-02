@@ -1,17 +1,27 @@
 from flask import Flask, render_template
 import pandas as pd
+import plotly.express as px
 
 app = Flask(__name__)
 
 def load_data():
-    df = pd.read_csv("data/enriched_test4.csv")
-    return df
+    return pd.read_csv("data/enriched_test4.csv")
 
 @app.route("/")
 def dashboard():
     df = load_data()
-    records = df.to_dict(orient="records")
-    return render_template("dashboard.html", records=records)
 
-if __name__ == "__main__":
-    app.run(debug=True)
+    # Example: EPSS vs Exploitability scatter plot
+    fig = px.scatter(
+        df,
+        x="EPSS_Score",
+        y="Exploitability_Score",
+        color="CVSS_Severity",
+        hover_name="CVE_ID",
+        title="EPSS vs Exploitability Score"
+    )
+
+    # Convert Plotly figure → HTML snippet
+    graph_html = fig.to_html(full_html=False)
+
+    return render_template("dashboard.html", graph_html=graph_html)
