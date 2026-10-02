@@ -5,7 +5,7 @@ import plotly.express as px
 app = Flask(__name__)
 
 def load_data():
-    return pd.read_csv("data/enriched_test4.csv")
+    return pd.read_csv("data/Enriched_Test.csv")
 
 @app.route("/")
 def dashboard():
