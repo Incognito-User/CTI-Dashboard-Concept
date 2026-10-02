@@ -15,6 +15,7 @@
 </p>
 # CTI-Dashboard-Concept
 
+![In Development](https://img.shields.io/badge/In%20Development-Active-yellow?style=flat-square)
 
 This repository hosts a concept visualization of a Cyber Threat Intelligence (CTI) dashboard designed to transform enriched vulnerability data into actionable insights. The goal is to demonstrate how threat‑intelligence signals (EPSS, KEV, exploit data, ATT&CK mapping, exposure context, and vendor impact) can be unified into a single decision‑ready view.
 
